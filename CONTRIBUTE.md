@@ -5,7 +5,8 @@ Clone the project!!
 
 When you're ready to start developing, create a branch using this command:
 
-`git checkout -b brief-description-of-work`
+`git checkout -b <your_name>/<description>`
+`Ex: git checkout -b basil/integrating-firebase`
 
 Develop on this branch, and set the upstream branch to master so you can track diffs:
 
@@ -14,6 +15,10 @@ Develop on this branch, and set the upstream branch to master so you can track d
 When you're ready to make a commit, add the files you've changed using:
 
 `git add file-you-changed.txt`
+
+OR add all files by
+
+`git add .`
 
 And commit the files using:
 

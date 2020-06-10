@@ -1,0 +1,73 @@
+<form
+  [formGroup]="this.plantMetadataService.form"
+  (ngSubmit)="onSubmit()"
+  style="
+    display: flex;
+    flex-direction: column;"
+>
+  <input
+    matInput
+    placeholder="Uploader Name"
+    formControlName="uploaderName"
+    type="text"
+  >
+
+  <select matNativeControl class="custom-select" formControlName="plantType">
+    <option value="">Plant Type</option>
+    <option *ngFor="let plantName of plantTypeList" [ngValue]="plantName">{{plantName}}</option>
+  </select>
+
+  <input
+    matInput
+    placeholder="Latitude"
+    formControlName="latitude"
+    type="text"
+   >
+
+  <input
+    matInput
+    placeholder="Longitude"
+    formControlName="longitude"
+    type="text"
+  >
+
+  <input
+    matInput
+    placeholder="Condition"
+    formControlName="condition"
+    type="text"
+  >
+
+  <input
+    matInput
+    placeholder="Date Added"
+    formControlName="dateAdded"
+    type="date"
+  >
+
+  <input
+    matInput
+    placeholder="Tags (Separated by comma)"
+    formControlName="tags"
+    type="text"
+  >
+
+  <!--for uploading file section-->
+  <input
+    type="file"
+    (change)="onFileSelected($event)"
+    accept=".png, .jpg">
+
+  <button
+    mat-stroked-button
+    style="margin: 10px;"
+    type="submit"
+  >
+    Submit
+  </button>
+
+</form>
+
+<p>We guessed your tree was a: {{knnTest}}</p>
+
+
